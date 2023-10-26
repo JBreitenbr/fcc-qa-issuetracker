@@ -1,0 +1,13 @@
+language = "nodejs"
+run = "npm start"
+entrypoint = "index.js"
+hidden = [".config", "package-lock.json"]
+modules = ["nodejs-18:v3-20230608-f4cd419"]
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["node", "index.js"]
+deploymentTarget = "cloudrun"
+ignorePorts = false
